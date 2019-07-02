@@ -1,25 +1,4 @@
-var chronometer
-var btnLeft
-var btnRight
-var minDec
-var minUni
-var secDec
-var secUni
-var milDec
-var milUni
-window.onload = function() {
-    chronometer = new Chronometer();
-    btnLeft = document.getElementById('btnLeft');
-    btnRight = document.getElementById('btnRight');
-    minDec = document.getElementById('minDec');
-    minUni = document.getElementById('minUni');
-    secDec = document.getElementById('secDec');
-    secUni = document.getElementById('secUni');
-    milDec = document.getElementById('milDec');
-    milUni = document.getElementById('milUni');
-    btnLeft.addEventListener('click', start);
-    btnRight.addEventListener('click', pressedReset);
-}
+var chronometer, btnLeft, btnRight, minDec, minUni, secDec, secUni, milDec, milUni
 
 function printMinutes() {
     let y = chronometer.getMinutes();
@@ -78,4 +57,19 @@ function pressedReset() {
 
 function pressedSplit() {
     chronometer.splitClick();
+}
+
+
+window.onload = function() {
+    chronometer = new Chronometer();
+    btnLeft = document.getElementById('btnLeft');
+    btnRight = document.getElementById('btnRight');
+    minDec = document.getElementById('minDec');
+    minUni = document.getElementById('minUni');
+    secDec = document.getElementById('secDec');
+    secUni = document.getElementById('secUni');
+    milDec = document.getElementById('milDec');
+    milUni = document.getElementById('milUni');
+    btnLeft.addEventListener('click', start);
+    btnRight.addEventListener('click', pressedReset);
 }
